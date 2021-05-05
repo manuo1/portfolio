@@ -1,0 +1,604 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+	<div id="colorlib-page">
+		<div class="container-wrap">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+
+    <!-- aside -->
+		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+      <!-- aside / header -->
+			<div class="text-center">
+				<div class="author-img" style="background-image: url({% static 'images/about.jpg' %});"></div>
+				<h1 id="colorlib-logo"><a href="{% url 'portfolio:homepage' %}">Emmanuel Oudot</a></h1>
+				<span class="position"><a href="{% url 'portfolio:homepage' %}">
+						Developpeur</a> web | python<br>
+						Junior
+				</span>
+			</div>
+      <!-- aside / nav -->
+			<nav id="colorlib-main-menu" role="navigation" class="navbar">
+				<div id="navbar" class="collapse">
+					<ul>
+						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
+						<li><a href="#" data-nav-section="about">Profil</a></li>
+						<li><a href="#" data-nav-section="skills">Hard skills</a></li>
+						<li><a href="#" data-nav-section="education">Formations</a></li>
+						<li><a href="#" data-nav-section="experience">Experience</a></li>
+						<li><a href="#" data-nav-section="work">Mes Projets</a></li>
+						<li><a href="#" data-nav-section="contact">Contact</a></li>
+						<li><a href="https://www.linkedin.com/in/emmanuel-oudot/" target="_blank"><i class="icon-linkedin22"></i></a>  |  <a href="https://github.com/manuo1" target="_blank"><i class="icon-github"></i></a></li>
+					  </ul>
+
+				</div>
+			</nav>
+      <!-- aside / footer -->
+			<div class="colorlib-footer">
+        <p>
+					<small>
+            <span>Template | <a href="https://colorlib.com/wp/template/jackson/" target="_blank">Jackson par Colorlib</a></span>
+            <span>Images | <a href="https://pixabay.com/fr/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3706563" target="_blank">Gerd Altmann</a> sur <a href="https://pixabay.com/fr/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3706563" target="_blank">Pixabay</a></span>
+						<span>Icones | <a href="https://icomoon.io/" target="_blank">IcoMoon</a></span>
+          </small>
+        </p>
+			</div>
+		</aside>
+
+    <!-- home -->
+		<div id="colorlib-main">
+			<section id="colorlib-hero" class="js-fullheight" data-section="home">
+				<div class="flexslider js-fullheight">
+					<ul class="slides">
+
+						<!-- info messages -->
+							{% if messages %}
+							<div class="info_messages" role="alert">
+								{% for message in messages %}
+								<div class="alert alert-{{ message.tags }}" role="alert"><strong>{{ message }}</strong></div>
+								{% endfor %}
+							</div>
+							{% endif %}
+
+            <!-- home / slide 1 -->
+				   	<li style="background-image: url({% static 'images/img_bg_1.png' %});">
+				   		<div class="overlay"></div>
+				   		<div class="container-fluid">
+				   			<div class="row">
+					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+					   				<div class="slider-text-inner js-fullheight">
+					   					<div class="desc">
+						   					<h1>Développeur Web</h1>
+						   					<h2>Emmanuel OUDOT</h2>
+												<p><a href="http://www.emmanuel-oudot.fr/CV/CV%20-%20Oudot%20Emmanuel.pdf" target="_blank" class="btn btn-primary btn-learn">Télécharger CV <i class="icon-download4"></i></a></p>
+											</div>
+					   				</div>
+					   			</div>
+					   		</div>
+				   		</div>
+				   	</li>
+            <!-- home / slide 2 -->
+				   	<li style="background-image: url({% static 'images/img_bg_2.png' %});">
+				   		<div class="overlay"></div>
+				   		<div class="container-fluid">
+				   			<div class="row">
+					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+					   				<div class="slider-text-inner">
+					   					<div class="desc">
+                        <h1>Développeur Python</h1>
+						   					<h2>Emmanuel OUDOT</h2>
+												<p><a href="http://www.emmanuel-oudot.fr/CV/CV%20-%20Oudot%20Emmanuel.pdf" target="_blank" class="btn btn-primary btn-learn">Télécharger CV <i class="icon-download4"></i></a></p>
+											</div>
+					   				</div>
+					   			</div>
+					   		</div>
+				   		</div>
+				   	</li>
+				  	</ul>
+			  	</div>
+			</section>
+
+      <!-- about -->
+			<section class="colorlib-about" data-section="about">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-12">
+              <!-- about / profil -->
+            	<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="col-md-12">
+                  <div class="about-desc">
+										<span class="heading-meta">About</span>
+										<h2 class="colorlib-heading">Profil</h2>
+										<p>Opticien de formation, la première partie de ma vie professionnelle à été dédiée à la satisfaction de mes clients. D’abord vendeur puis responsable de magasin, j’ai développé écoute et sens du service mais aussi rigueur et organisation.</p>
+									  <p>Adepte des nouvelles technologies, je me suis toujours passionné pour le développement de projets personnels divers comme par exemple la domotiques (Arduino | C++) ou des systèmes de gestion/facturation (VBA).</p>
+                    <p>Récemment diplômé en développement d’application Python, que ce soit dans le web, le développement de logiciel, l’IOT ou la domotique , je souhaite utiliser et améliorer toutes mes compétences dans ces métiers passionnants.</p>
+									</div>
+								</div>
+							</div>
+              <!-- about / soft-skills -->
+              <span class="heading-meta">Soft skills</span>
+              <div class="row">
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+									<div class="services color-1">
+										<span class="icon2"><i class="icon-user2"></i></span>
+										<h3>Ecoute, Empathie</h3>
+									</div>
+								</div>
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
+									<div class="services color-2">
+										<span class="icon2"><i class="icon-fast-forward"></i></span>
+										<h3>Persévérance</h3>
+									</div>
+								</div>
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
+									<div class="services color-3">
+										<span class="icon2"><i class="icon-location3"></i></span>
+										<h3>Rigueur</h3>
+									</div>
+								</div>
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInBottom">
+									<div class="services color-4">
+										<span class="icon2"><i class="icon-grid2"></i></span>
+										<h3>Organisation</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+      <!-- hard-skills -->
+			<section class="colorlib-skills" data-section="skills">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Hard skills</span>
+							<h2 class="colorlib-heading animate-box">Langages et<br>Compétences Techniques</h2>
+						</div>
+					</div>
+					<div class="row">
+
+            <!-- skill 1 -->
+            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="progress-wrap">
+								<h3>Python</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="75"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:75%">
+								    </div>
+								</div>
+							</div>
+						</div>
+            <!-- skill 2 -->
+            <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="progress-wrap">
+								<h3>Programmation Orienté Objet (POO)</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="70"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
+								    </div>
+								</div>
+							</div>
+						</div>
+            <!-- skill 3 -->
+            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="progress-wrap">
+								<h3>Django</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="75"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:75%">
+								    </div>
+								</div>
+							</div>
+						</div>
+            <!-- skill 4 -->
+            <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="progress-wrap">
+								<h3>Windows / Linux</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="70"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
+								    </div>
+								</div>
+							</div>
+						</div>
+            <!-- skill 5 -->
+            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="progress-wrap">
+								<h3>Git / GitHub / GitHub Actions</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="60"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:60%">
+								    </div>
+								</div>
+							</div>
+						</div>
+            <!-- skill 6 -->
+            <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="progress-wrap">
+								<h3>UML</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="40"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:40%">
+								    </div>
+								</div>
+							</div>
+						</div>
+            <!-- skill 7 -->
+            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="progress-wrap">
+								<h3>Html / CSS</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="70"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
+								    </div>
+								</div>
+							</div>
+						</div>
+            <!-- skill 8 -->
+            <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="progress-wrap">
+								<h3>Tests unitaires et d’intégration</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="50"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:50%">
+								    </div>
+								</div>
+							</div>
+						</div>
+            <!-- skill 9 -->
+            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="progress-wrap">
+								<h3>Bootstrap</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="70"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
+								    </div>
+								</div>
+							</div>
+						</div>
+            <!-- skill 10 -->
+            <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="progress-wrap">
+								<h3>Tests fonctionnels Sélénium</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="60"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:60%">
+								    </div>
+								</div>
+							</div>
+						</div>
+            <!-- skill 11 -->
+            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="progress-wrap">
+								<h3>Javascript / Ajax / JQuery</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="50"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:40%">
+								    </div>
+								</div>
+							</div>
+						</div>
+            <!-- skill 12 -->
+            <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="progress-wrap">
+								<h3>Utilisation d’API REST</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="50"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:50%">
+								    </div>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+			</section>
+
+      <!-- education -->
+			<section class="colorlib-education" data-section="education">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Education</span>
+							<h2 class="colorlib-heading animate-box">Formations</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<div class="fancy-collapse-panel">
+								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                  <!-- education 1 -->
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingOne">
+									        <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Développeur d'application – Python</a></h4>
+									    </div>
+									    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+									         <div class="panel-body">
+									            <div class="row">
+										      		<div class="col-md-6"><p>Diplôme RNCP Niveau II (Bac +3/4) </p></div>
+										      		<div class="col-md-6"><p>Avril 2020 – Avril 2021<br>OpenClassrooms (Enseignement à distance)</p></div>
+										      	</div>
+									         </div>
+									    </div>
+									</div>
+                  <!-- education 2 -->
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingTwo">
+									        <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Opticien Lunetier</a></h4>
+									    </div>
+									    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+									        <div class="panel-body">
+                            <div class="row">
+                            <div class="col-md-6"><p>BTS (Bac +2) </p></div>
+                            <div class="col-md-6"><p>2000<br>Lycée Victor BERARD (39)</p></div>
+                          </div>
+									        </div>
+									    </div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+      <!-- experience -->
+			<section class="colorlib-experience" data-section="experience">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Experience</span>
+							<h2 class="colorlib-heading animate-box">Expérience professionnelle</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+				         <div class="timeline-centered">
+
+									 <!-- experience 1 -->
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-1">
+					                  <i class="icon-code"></i>
+					               </div>
+					               <div class="timeline-label">
+					                  <h2><a href="#">Projet de formation : Troc Graines</a> <span>2021</span></h2>
+														<p>
+															Troc Graine est une application d’échange et de partage de graines.
+															Réalisé avec le framework Django, en intégration continue (CI) avec Github Actions.
+															Elle utilise une base de données PostgreSQL, possède un système d’authentification, d'envoi de mail et d'upload d'images.
+															Bootstrap a été personnalisé en modifiant les variables SASS et le CSS du projet est compressé.
+															<br>
+															<a href="#my-works"><i class="icon-arrow-down3"></i>Voir dans mes Projets<i class="icon-arrow-down3"></i></a>
+														</p>
+												 </div>
+					            </div>
+					         </article>
+
+									 <!-- experience 2 -->
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-2">
+					                  <i class="icon-server"></i>
+					               </div>
+												 <div class="timeline-label">
+					                  <h2><a href="#">Projet de formation : Déployer une application sur un serveur (IasS)</a> <span>2021</span></h2>
+														<p>
+																Projet DevOps de configuration et déploiement en ligne de commande sur un serveur Digitalocean avec un système d’exploitation Linux.
+																Déploiement en intégration et déploiement continu (CI/CD) avec GitHub actions.
+																Configuration des serveurs HTTP (NGinx) et d’application WSGI (Gunicorn).
+																Configuration de Supervisor pour démarrer ou redémarrer le serveur d’application automatiquement.
+																Monitoring avec Sentry et les outils de l'hébergeur. Tache cron de mise à jour automatique des données nécessaires à l’application.
+																<br>
+																<a href="#my-works"><i class="icon-arrow-down3"></i>Voir dans mes Projets<i class="icon-arrow-down3"></i></a>
+														</p>
+												 </div>
+					            </div>
+					         </article>
+
+									 <!-- experience 3 -->
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-3">
+					                  <i class="icon-code"></i>
+					               </div>
+												 <div class="timeline-label">
+					                  <h2><a href="#">Projet de formation : PurBeurre</a> <span>2020</span></h2>
+														<p>
+															Pur Beurre est une application web de recherche de substituts alimentaires développée en suivant un cahier des charges client et une charte graphique.
+															Réalisée avec le framework Django, elle utilise une base de données PostgreSQL, peuplée automatiquement en utilisant l’API d’ Open Food Facts.
+															Elle possède un système d'authentification et de gestion des favoris.
+															<br>
+																<a href="#my-works"><i class="icon-arrow-down3"></i>Voir dans mes Projets<i class="icon-arrow-down3"></i></a>
+														</p>
+												 </div>
+					            </div>
+					         </article>
+
+									 <!-- experience 4 -->
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInTop">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-4">
+					                  <i class="icon-code"></i>
+					               </div>
+												 <div class="timeline-label">
+					                  <h2><a href="#">Projet de formation : GrandPy</a> <span>2020</span></h2>
+														<p>
+																Grandpy est un Chatbot qui interagit avec les API de Google et Wikipédia. Il a été réalisé en TDD avec le framework Flask et Bootstrap.
+																Les interactions ce font avec AJAX et l'interface est responsive.
+																<br>
+																<a href="#my-works"><i class="icon-arrow-down3"></i>Voir dans mes Projets<i class="icon-arrow-down3"></i></a>
+														</p>
+												 </div>
+					            </div>
+					         </article>
+
+									 <!-- experience 5 -->
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-5">
+					                  <i class="icon-eye"></i>
+					               </div>
+												 <div class="timeline-label">
+					                  <h2><a href="#">Opticien directeur</a> <span>Avr. 2006 – Déc. 2019</span></h2>
+														<p>
+																Magasin Les opticiens mutualistes de Saint-Amand-Montrond (18)<br><br>
+																Budgets, gestion des stocks, suivi des ventes, organisation du personnel, mise en place de procédures et formation des équipes
+														</p>
+												 </div>
+					            </div>
+					         </article>
+
+									 <!-- experience 6 -->
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-1">
+					                  <i class="icon-eye"></i>
+					               </div>
+					               <div class="timeline-label">
+					                  <h2><a href="#">Opticien</a> <span>Sep. 2000 – Avr. 2006</span></h2>
+														<p>
+																Magasin Les opticiens mutualistes | <small>Bourges (18) 2004 – 2006</small><br>
+																Magasin Optic Calvin | <small>Bourges (18) 2001 – 2004</small><br>
+																Magasin Optissimo | <small>Brumath (67) 2000 – 2001</small><br><br>
+																Accueil client, Recherche des besoins, choix de solutions adaptées.
+														</p>
+												 </div>
+					            </div>
+					         </article>
+
+					      </div>
+					   </div>
+				   </div>
+				</div>
+			</section>
+			<!-- works -->
+			<section class="colorlib-work" data-section="work" id="my-works">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">My Work</span>
+							<h2 class="colorlib-heading animate-box">Mes Projets</h2>
+						</div>
+					</div>
+					<div class="row">
+
+						<!-- work 1 -->
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url({% static 'images/img-1.jpg' %});">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Troc Graines</a></h3>
+										<span>Application Web</span>
+										<p class="icon">
+											<span><a href="https://trocgraines.herokuapp.com/"><i class="icon-link2"></i> Site</a></span>
+											<span><a href="https://github.com/manuo1/P13-TrocGraines"><i class="icon-github"></i> GitHub</a></span>
+											<span><a href="https://github.com/manuo1/P13-TrocGraines/blob/master/Projet%2013%20-%20Dossier%20de%20pr%C3%A9sentation.pdf"><i class="icon-file-pdf"></i> Présentation</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- work 2 -->
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="project" style="background-image: url({% static 'images/img-2.jpg' %});">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Déploiement sur un serveur (IasS)</a></h3>
+										<span>DevOps</span>
+										<p class="icon">
+											<span><a href="https://github.com/manuo1/P10PurBeurre-IAAS-deployment"><i class="icon-github"></i> GitHub</a></span>
+											<span><a href="https://github.com/manuo1/P10PurBeurre-IAAS-deployment/blob/master/Projet%2010%20-%20Dossier%20de%20pr%C3%A9sentation.pdf"><i class="icon-file-pdf"></i> Présentation</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- work 3 -->
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
+							<div class="project" style="background-image: url({% static 'images/img-3.jpg' %});">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Pur Beurre</a></h3>
+										<span>Application Web</span>
+										<p class="icon">
+											<span><a href="http://165.22.118.210/"><i class="icon-link2"></i> Site</a></span>
+											<span><a href="https://github.com/manuo1/P8PurBeurre"><i class="icon-github"></i> GitHub</a></span>
+											<span><a href="https://github.com/manuo1/P8PurBeurre/blob/master/Projet%2008%20-%20Dossier%20de%20pr%C3%A9sentation.pdf"><i class="icon-file-pdf"></i> Présentation</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- work 4 -->
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
+							<div class="project" style="background-image: url({% static 'images/img-4.jpg' %});">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">GrandPy</a></h3>
+										<span>Application Web</span>
+										<p class="icon">
+											<span><a href="https://grandpy-mo1.herokuapp.com/"><i class="icon-link2"></i> Site</a></span>
+											<span><a href="https://github.com/manuo1/P7Grandpy"><i class="icon-github"></i> GitHub</a></span>
+											<span><a href="https://github.com/manuo1/P7Grandpy/blob/master/Projet%2007%20-%20Dossier%20de%20pr%C3%A9sentation.pdf"><i class="icon-file-pdf"></i> Présentation</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="colorlib-contact" data-section="contact" id="contact">
+				<div class="colorlib-narrow-content">
+
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Contact</span>
+							<h2 class="colorlib-heading">Me Contacter</h2>
+						</div>
+
+					<div class="row">
+						<div class="col-md-12 col-md-push-1">
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
+									<form action="{% url 'portfolio:homepage' %}" method="post">
+										{% csrf_token %}
+										<div class="form-group">
+											{{ contact_form.name }}
+										</div>
+										<div class="form-group">
+											{{ contact_form.email }}
+										</div>
+										<div class="form-group">
+											{{ contact_form.subject }}
+										</div>
+										<div class="form-group">
+											{{ contact_form.message }}
+										</div>
+										<div class="form-group">
+											<button type="submit" class="btn btn-primary btn-send-message">Envoyer</button>
+										</div>
+									</form>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+		</div><!-- end:colorlib-main -->
+	</div><!-- end:container-wrap -->
+	</div><!-- end:colorlib-page -->
+{% endblock %}

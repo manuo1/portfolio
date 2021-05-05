@@ -13,6 +13,8 @@ import os
 
 from pathlib import Path
 
+from django.contrib.messages import constants as messages
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -33,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'portfolio',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -50,7 +53,7 @@ ROOT_URLCONF = 'portfolio_config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,8 +121,36 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# crispy_forms
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_TIMEOUT = 10
+EMAIL_USE_TLS = True
+EMAIL_HOST = os.environ['EMAIL_HOST']  # 'smtp.mail.fr'
+EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']  # 'youremail@mail.fr'
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']  # 'email_password'
+EMAIL_PORT = os.environ['EMAIL_PORT']
+DEFAULT_FROM_EMAIL = os.environ['DEFAULT_FROM_EMAIL']
+MY_MAIL = os.environ['MY_MAIL']
+
+# change django message tags to match bootstrap tags
+MESSAGE_TAGS = {
+    messages.DEBUG: 'info',
+    messages.INFO: 'info',
+    messages.SUCCESS: 'success',
+    messages.WARNING: 'warning',
+    messages.ERROR: 'danger',
+}
