@@ -7,7 +7,12 @@ from django.shortcuts import render
 from smtplib import SMTPException
 
 
-from portfolio_config.settings.common import DEFAULT_FROM_EMAIL, MY_MAIL
+from portfolio_config.settings.common import (
+    DEFAULT_FROM_EMAIL,
+    MY_MAIL,
+    PHONE_NUMBER,
+    CV_LINK
+)
 from portfolio.forms import ContactForm
 from portfolio.email_templates import (
     SENDER_SUMMARY_SUBJECT,SENDER_SUMMARY_MESSAGE,
@@ -50,7 +55,7 @@ def homepage(request):
 
             """ builds sender's summary message """
             summary_message = SENDER_SUMMARY_MESSAGE.format(
-                        now, subject, message
+                        CV_LINK, PHONE_NUMBER, now, subject, message
                         )
             """ sends summary message """
             try:

@@ -144,7 +144,6 @@ EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']  # 'youremail@mail.fr'
 EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']  # 'email_password'
 EMAIL_PORT = os.environ['EMAIL_PORT']
 DEFAULT_FROM_EMAIL = os.environ['DEFAULT_FROM_EMAIL']
-MY_MAIL = os.environ['MY_MAIL']
 
 # change django message tags to match bootstrap tags
 MESSAGE_TAGS = {
@@ -154,3 +153,8 @@ MESSAGE_TAGS = {
     messages.WARNING: 'warning',
     messages.ERROR: 'danger',
 }
+
+# somme personnal information
+CV_LINK = os.environ['CV_LINK']
+PHONE_NUMBER = os.environ['PHONE_NUMBER']
+MY_MAIL = os.environ['MY_MAIL']
