@@ -566,6 +566,12 @@ body.offcanvas {
     background: #a84cb8; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-5 {
     background: #2fa499; }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-6 {
+    background: #7FB7BE; }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-7 {
+    background: #1F0322; }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-8 {
+    background: #244F26; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-none {
     background: #fff;
     width: 20px;
@@ -807,6 +813,34 @@ body.offcanvas {
       background: #4054b2; }
     .progress-bar.color-6 span {
       color: #4054b2; }
+  .progress-bar.color-7 {
+    background: #254D32; }
+    .progress-bar.color-7:after {
+      background: #254D32; }
+    .progress-bar.color-7 span {
+      color: #254D32; }
+  .progress-bar.color-8 {
+    background: #302B27; }
+    .progress-bar.color-8:after {
+      background: #302B27; }
+    .progress-bar.color-8 span {
+      color: #302B27; }
+
+  .progress-bar.color-9 {
+    background: #EE8434; }
+    .progress-bar.color-9:after {
+      background: #EE8434; }
+    .progress-bar.color-9 span {
+      color: #EE8434; }
+
+  .progress-bar.color-10 {
+    background: #9BB1FF; }
+    .progress-bar.color-10:after {
+      background: #9BB1FF; }
+    .progress-bar.color-10 span {
+      color: #9BB1FF; }
+
+
 
 .colorlib-feature {
   text-align: left;
