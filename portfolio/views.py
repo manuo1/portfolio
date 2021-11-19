@@ -35,14 +35,14 @@ def homepage(request):
             subject = contact_form.cleaned_data['subject']
             message = contact_form.cleaned_data['message']
             """ check the content of the email """
-            for word in denied_words.in_email():
-                if word in email:
-                    messages.error(request,f'Vous ne pouvez pas utiliser un Email contenant {word}')
+            for denied in denied_words.in_email():
+                if denied.word in email:
+                    messages.error(request,f'Vous ne pouvez pas utiliser un Email contenant {denied.word}')
                     message_is_valid = False
             """ check the content of the message """
-            for word in denied_words.in_message():
-                if word in message:
-                    messages.error(request,f'Vous ne pouvez pas utiliser \"{word}\" dans votre message')
+            for denied in denied_words.in_message():
+                if denied.word in message:
+                    messages.error(request,f'Vous ne pouvez pas utiliser \"{denied.word}\" dans votre message')
                     message_is_valid = False
             """ send messages if valid """
             if message_is_valid:
