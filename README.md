@@ -1,6 +1,6 @@
 ##
-# **Code de mon PortFolio :**
+# **Code de mon PortFolio**
 
-## **VERSION EN LIGNE**
+A retrouver ici :
 
 [**www.emmanuel-oudot.fr/**](https://www.emmanuel-oudot.fr/)

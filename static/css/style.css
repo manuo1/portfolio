@@ -572,6 +572,18 @@ body.offcanvas {
     background: #1F0322; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-8 {
     background: #244F26; }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-9 {
+    background: #A1E8CC; }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-10 {
+    background: #034732; }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-11 {
+    background: #650D1B; }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-12 {
+    background: #B2CEDE; }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-13 {
+    background: #78E0DC; }
+  .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-14 {
+    background: #FFC2E2; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-none {
     background: #fff;
     width: 20px;
